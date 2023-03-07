@@ -5,7 +5,6 @@ class PostsController < ApplicationController
   end
 
   def show
-
   end
 
   def new
@@ -14,7 +13,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-
     if @post.save
       redirect_to @post
     else
@@ -23,7 +21,6 @@ class PostsController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
@@ -35,14 +32,11 @@ class PostsController < ApplicationController
   end
 
   def destroy
-
     @post.destroy
-
     redirect_to root_path, status: :see_other
   end
 
   private
-
   def set_post
     @post = Post.friendly.find(params[:id])
   end
